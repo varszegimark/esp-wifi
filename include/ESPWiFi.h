@@ -9,8 +9,8 @@
 class ESPWiFi {
   public:
     ESPWiFi(const char* _wiFiSSID, const char* _wiFiPassword, const String _wifiHostname = "");
-    void connectToWiFiExclusive();
-    void reConnectToWifi();
+    void connect();
+    void reconnect();
     bool connected();
     void setLedToggle(bool _ledToggle = true);
   private:

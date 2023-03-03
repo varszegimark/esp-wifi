@@ -11,7 +11,7 @@ ESPWiFi::ESPWiFi(const char* _wiFiSSID, const char* _wiFiPassword, const String 
   WiFi.hostname(_wifiHostname);
 }
 
-void ESPWiFi::connectToWiFiExclusive() {
+void ESPWiFi::connect() {
   Serial.print("\nConnecting to WiFi");
   WiFi.begin(wiFiSSID, wiFiPassword);
   while (WiFi.status() != WL_CONNECTED) {
@@ -28,7 +28,7 @@ void ESPWiFi::connectToWiFiExclusive() {
   }
 }
 
-void ESPWiFi::reConnectToWifi() {
+void ESPWiFi::reconnect() {
   unsigned long currentMillis = millis();
 
   if (ledToggle && (WiFi.status() != WL_CONNECTED) && (currentMillis - lastLedToggle >= ledToggleInterval)) {
