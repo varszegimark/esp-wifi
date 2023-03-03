@@ -1,0 +1,24 @@
+{
+  "name": "ESP WiFi",
+  "version": "1.0.0",
+  "description": "WiFi connection library for ESP-32 and ESP-8266 boards",
+  "keywords": "esp, esp32, esp8266, wifi",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/varszegimark/esp-wifi.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Mark Varszegi",
+      "email": "mark.varszegi@gmail.com",
+      "url": "",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "frameworks": "arduino",
+  "platforms": ["espressif32", "espressif8266"]
+}
