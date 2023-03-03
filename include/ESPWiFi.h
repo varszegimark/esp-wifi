@@ -12,6 +12,7 @@ class ESPWiFi {
     void connectToWiFiExclusive();
     void reConnectToWifi();
     bool connected();
+    void setLedToggle(bool _ledToggle = true);
   private:
     const char* wiFiSSID;
     const char* wiFiPassword;
@@ -22,7 +23,6 @@ class ESPWiFi {
     unsigned long ledToggleInterval = 1000;
     bool builtinLedIsOn = false;
     bool ledToggle = false;
-    void setLedToggle(bool _ledToggle = true);
     void builtinLedOn();
     void builtinLedOff();
     void builtinLedToggle();
