@@ -11,6 +11,13 @@ ESPWiFi::ESPWiFi(const char* _wiFiSSID, const char* _wiFiPassword, const String 
   WiFi.hostname(_wifiHostname);
 }
 
+ESPWiFi::ESPWiFi() {
+  WiFi.mode(WIFI_STA);
+  #if defined(ESP8266)
+  WiFi.setSleepMode(WIFI_NONE_SLEEP);
+  #endif
+}
+
 void ESPWiFi::connect() {
   Serial.print("\nConnecting to WiFi");
   WiFi.begin(wiFiSSID, wiFiPassword);
@@ -57,6 +64,18 @@ bool ESPWiFi::connected() {
 
 void ESPWiFi::setLedToggle(bool _ledToggle) {
   ledToggle = _ledToggle;
+}
+
+void ESPWiFi::setSSID(const char* _wiFiSSID) {
+  wiFiSSID = _wiFiSSID;
+}
+
+void ESPWiFi::setPassword(const char* _wiFiPassword) {
+  wiFiPassword = _wiFiPassword;
+}
+
+void ESPWiFi::setHostname(String _wifiHostname) {
+  wifiHostname = _wifiHostname;
 }
 
 void ESPWiFi::builtinLedOn() {
