@@ -78,6 +78,10 @@ void ESPWiFi::setHostname(String _wifiHostname) {
   wifiHostname = _wifiHostname;
 }
 
+void ESPWiFi::getLocalIp() {
+  return WiFi.localIP();
+}
+
 void ESPWiFi::builtinLedOn() {
   digitalWrite(BUILTIN_LED, LOW);
   builtinLedIsOn = true;

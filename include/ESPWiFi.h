@@ -17,6 +17,7 @@ class ESPWiFi {
     void setSSID(const char* _wiFiSSID);
     void setPassword(const char* _wiFiPassword);
     void setHostname(String _wifiHostname);
+    IPAddress getLocalIp();
   private:
     const char* wiFiSSID;
     const char* wiFiPassword;
