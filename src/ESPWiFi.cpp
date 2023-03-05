@@ -78,7 +78,7 @@ void ESPWiFi::setHostname(String _wifiHostname) {
   wifiHostname = _wifiHostname;
 }
 
-void ESPWiFi::getLocalIp() {
+IPAddress ESPWiFi::getLocalIp() {
   return WiFi.localIP();
 }
 
